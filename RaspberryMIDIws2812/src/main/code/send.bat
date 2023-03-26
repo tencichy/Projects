@@ -1,0 +1,1 @@
+psftp 192.168.0.107 -l pi -pw raspberry -b ftpTransfer.scr

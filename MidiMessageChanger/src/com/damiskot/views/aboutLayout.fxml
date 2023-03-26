@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.damiskot.AboutController">
+   <children>
+      <ImageView fx:id="appImage" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <Label layoutX="90.0" layoutY="38.0" text="Midi Message Changer" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="142.0" layoutY="38.0" text="Version - 0.0.1">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="90.0" text="Copyright © 2020, Damian Matwiszyn" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="120.0" text="This software is free and for non-commercial use" AnchorPane.topAnchor="130.0" />
+      <Label layoutX="128.0" layoutY="147.0" text="Credits:" AnchorPane.topAnchor="167.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutY="187.0" text="Icons made by" AnchorPane.leftAnchor="10.0" />
+      <Hyperlink fx:id="iconMaker" layoutX="87.0" layoutY="184.0" onAction="#handleIconMaker" text="Smashicons" AnchorPane.topAnchor="185.0" />
+      <Label layoutX="158.0" layoutY="187.0" text="form" />
+      <Hyperlink fx:id="iconSite" layoutX="184.0" layoutY="184.0" onAction="#handleIconSite" text="www.flaticon.com" />
+      <Label layoutY="199.0" text="is licensed by" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="204.0" />
+      <Hyperlink fx:id="creativeCommons" layoutX="81.0" layoutY="201.0" onAction="#handleCreativeCommons" text="CC 3.0 BY" />
+   </children>
+</AnchorPane>

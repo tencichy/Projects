@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.damiskot.GeneratorController">
+   <children>
+      <TabPane fx:id="tabs" layoutX="110.0" layoutY="84.0" prefHeight="400.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+            <Tab fx:id="eventsListTab" text="Events List">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="listOfThreads" prefHeight="371.0" prefWidth="650.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="listOfThreadsColumn" maxWidth="650.0" minWidth="650.0" prefWidth="650.0" resizable="false" text="Events" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="660.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleDeleteEvent" text="Delete event" AnchorPane.leftAnchor="660.0" AnchorPane.topAnchor="10.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab fx:id="setChordsTab" closable="false" text="Set Message">
+            <content>
+              <AnchorPane fx:id="setChordsAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane hbarPolicy="NEVER" layoutX="191.0" layoutY="43.0" prefHeight="371.0" prefWidth="800.0" vbarPolicy="NEVER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <AnchorPane prefHeight="370.0" prefWidth="786.0">
+                                 <children>
+                                    <Label layoutX="38.0" layoutY="21.0" text="Note to click" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="14.0" />
+                                    <ComboBox fx:id="keyToClick" layoutX="70.0" layoutY="10.0" prefWidth="70.0" AnchorPane.leftAnchor="82.0" AnchorPane.topAnchor="10.0" />
+                                    <RadioButton fx:id="radioKeys" layoutX="160.0" layoutY="14.0" mnemonicParsing="false" onAction="#handlerRadio" text="Select notes to send" AnchorPane.leftAnchor="160.0" />
+                                    <RadioButton fx:id="radioChord" layoutX="302.0" layoutY="14.0" mnemonicParsing="false" onAction="#handlerRadio" text="Select chord" AnchorPane.leftAnchor="296.0" />
+                                    <RadioButton fx:id="radioCC" layoutX="399.0" layoutY="14.0" mnemonicParsing="false" onAction="#handlerRadio" text="Select CC message" AnchorPane.leftAnchor="393.0" />
+                                    <Label fx:id="hmkts" layoutX="6.0" layoutY="35.0" text="How many notes to send" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="65.0" />
+                                    <ComboBox fx:id="howManyKeys" layoutX="136.0" layoutY="61.0" onAction="#handlerHowManyKeys" prefWidth="50.0" AnchorPane.leftAnchor="148.0" />
+                                    <Label fx:id="kts" layoutX="10.0" layoutY="78.0" text="Notes to send" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="98.0" />
+                                    <ComboBox fx:id="keyToSend1" layoutX="78.0" layoutY="84.0" prefWidth="70.0" AnchorPane.leftAnchor="90.0" AnchorPane.topAnchor="94.0" />
+                                    <ComboBox fx:id="keyToSend3" layoutX="193.0" layoutY="94.0" prefWidth="70.0" AnchorPane.leftAnchor="240.0" />
+                                    <Label fx:id="cbn" layoutX="454.0" layoutY="206.0" text="Chord base note" AnchorPane.rightAnchor="244.0" AnchorPane.topAnchor="206.0" />
+                                    <ComboBox fx:id="chordBaseNote" layoutX="552.0" layoutY="202.0" prefWidth="50.0" AnchorPane.leftAnchor="552.0" />
+                                    <Label fx:id="toc" layoutX="612.0" layoutY="206.0" text="Type of chord" AnchorPane.leftAnchor="612.0" />
+                                    <ComboBox fx:id="typeOfChord" layoutX="696.0" layoutY="202.0" prefWidth="70.0" AnchorPane.leftAnchor="696.0" />
+                                    <Label fx:id="scn" layoutX="496.0" layoutY="65.0" text="Select CC number" AnchorPane.leftAnchor="466.0" AnchorPane.topAnchor="70.0" />
+                                    <Spinner fx:id="ccNumber" editable="true" layoutX="591.0" layoutY="61.0" prefWidth="60.0" AnchorPane.leftAnchor="571.0" AnchorPane.topAnchor="66.0" />
+                                    <Label fx:id="sv" layoutX="651.0" layoutY="65.0" text="Select value" AnchorPane.leftAnchor="641.0" AnchorPane.topAnchor="70.0" />
+                                    <Spinner fx:id="ccValue" editable="true" layoutX="704.0" layoutY="61.0" prefWidth="60.0" AnchorPane.leftAnchor="714.0" AnchorPane.topAnchor="66.0" />
+                                    <Line fx:id="kl" endX="170.0" layoutX="136.0" layoutY="56.0" startX="-129.0" strokeLineCap="ROUND" strokeWidth="2.0" />
+                                    <Line endX="68.0" layoutX="221.0" layoutY="36.0" startX="-64.0" strokeWidth="2.0" />
+                                    <Line fx:id="cl" endX="214.0" fill="BLACK" layoutX="555.0" layoutY="197.0" startX="-104.0" strokeWidth="2.0" />
+                                    <Line fx:id="ccl" endX="235.0" endY="1.0" fill="BLACK" layoutX="542.0" layoutY="60.0" startX="-79.0" strokeWidth="2.0" />
+                                    <Line endX="58.0" fill="BLACK" layoutX="324.0" layoutY="36.0" startX="-35.0" strokeWidth="2.0" AnchorPane.leftAnchor="292.0" />
+                                    <Line endX="91.0" fill="BLACK" layoutX="422.0" layoutY="36.0" startX="-36.0" strokeWidth="2.0" AnchorPane.leftAnchor="389.0" />
+                                    <CubicCurve fx:id="kcc" controlX1="-108.0" controlX2="-12.0" controlY1="-200.5" controlY2="-149.0" endX="-18.0" endY="-186.0" fill="#ffffff00" layoutX="248.0" layoutY="223.0" startX="-91.5" startY="-168.0" stroke="BLACK" strokeWidth="2.0" />
+                                    <CubicCurve fx:id="ccc" controlX1="-35.0" controlX2="182.0" controlY1="-76.5" controlY2="-166.0" endX="122.0" endY="-18.0" fill="#ffffff00" layoutX="488.0" layoutY="215.0" startX="-148.5" startY="-179.0" stroke="BLACK" strokeWidth="2.0" />
+                                    <CubicCurve fx:id="cccc" controlX1="-154.0" controlX2="33.0" controlY1="-121.5" controlY2="-172.0" endY="-139.5" fill="#f0f0f000" layoutX="620.0" layoutY="200.0" startX="-166.5" startY="-164.0" stroke="BLACK" strokeWidth="2.0" />
+                                    <Spinner fx:id="midiChannel" editable="true" layoutX="620.0" layoutY="10.0" prefWidth="60.0" AnchorPane.rightAnchor="10.0" />
+                                    <Label fx:id="midiChannelLabel" layoutX="644.0" layoutY="14.0" text="MIDI Channel" AnchorPane.rightAnchor="80.0" />
+                                    <ComboBox fx:id="keyToSend2" layoutX="135.0" layoutY="94.0" prefWidth="70.0" AnchorPane.leftAnchor="165.0" />
+                                    <ComboBox fx:id="keyToSend4" layoutX="248.0" layoutY="94.0" prefWidth="70.0" AnchorPane.leftAnchor="315.0" />
+                                    <Label fx:id="st" layoutX="313.0" layoutY="119.0" text="Set velocity" AnchorPane.leftAnchor="303.0" AnchorPane.topAnchor="139.0" />
+                                    <RadioButton fx:id="radioFromInput" layoutX="370.0" layoutY="131.0" mnemonicParsing="false" onAction="#handlerVelocityRadio" text="From input" AnchorPane.leftAnchor="373.0" AnchorPane.topAnchor="130.0" />
+                                    <RadioButton fx:id="radioFromNumber" layoutX="374.0" layoutY="148.0" mnemonicParsing="false" onAction="#handlerVelocityRadio" text="From number" AnchorPane.leftAnchor="373.0" AnchorPane.topAnchor="149.0" />
+                                    <Line fx:id="vl" endX="155.0" fill="BLACK" layoutX="383.0" layoutY="130.0" startX="-80.0" strokeWidth="2.0" AnchorPane.topAnchor="124.5" />
+                                    <CubicCurve fx:id="kcc2" controlX1="-336.0" controlX2="-292.0" controlY1="-195.0" controlY2="-265.0" endX="-189.5" endY="-141.5" fill="TRANSPARENT" layoutX="610.0" layoutY="266.0" startX="-380.22955322265625" startY="-229.54715576171876" stroke="BLACK" strokeWidth="2.0" />
+                                    <CubicCurve fx:id="ccc2" controlX1="2.0" controlX2="-231.0" controlY1="-147.0" controlY2="-230.0" endX="-220.5" endY="-158.5" fill="TRANSPARENT" layoutX="641.0" layoutY="283.0" startX="-31.0" startY="-87.0" stroke="BLACK" strokeWidth="2.0" />
+                                    <Spinner fx:id="velocityNumber" editable="true" layoutX="468.0" layoutY="145.0" prefWidth="60.0" AnchorPane.leftAnchor="478.0" />
+                                    <CheckBox fx:id="returnCC" layoutX="694.0" layoutY="98.0" mnemonicParsing="false" text="Return CC" AnchorPane.leftAnchor="641.0" AnchorPane.topAnchor="97.0" />
+                                    <Button layoutX="667.0" layoutY="295.0" mnemonicParsing="false" onAction="#handleAddEvent" text="Add event" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="settingsTab" closable="false" text="Settings">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Input Device" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="14.0" />
+                        <ComboBox fx:id="inputDevices" layoutX="77.0" layoutY="6.0" prefWidth="150.0" AnchorPane.leftAnchor="97.0" AnchorPane.topAnchor="10.0" />
+                        <Label layoutX="10.0" layoutY="31.0" text="Output Device" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="51.0" />
+                        <ComboBox fx:id="outputDevices" layoutX="87.0" layoutY="43.0" prefWidth="150.0" AnchorPane.leftAnchor="97.0" AnchorPane.topAnchor="47.0" />
+                        <Button fx:id="scanButton" layoutX="257.0" layoutY="28.0" mnemonicParsing="false" onAction="#handleScanButton" text="Scan Devices" />
+                        <Button fx:id="connectButton" layoutX="352.0" layoutY="28.0" mnemonicParsing="false" onAction="#handleConnectButton" text="Connect" />
+                        <CheckBox fx:id="debug" layoutX="7.0" layoutY="80.0" mnemonicParsing="false" onAction="#handleDebugCheckbox" text="Enable Debug" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="88.0" />
+                        <Button fx:id="panicButton" layoutX="106.0" layoutY="84.0" mnemonicParsing="false" onAction="#handlePanic" text="Panic" AnchorPane.leftAnchor="116.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="debugTab" closable="false" text="Debug">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="333.0" layoutY="14.0" text="MIDI Messages" AnchorPane.topAnchor="10.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutX="300.0" layoutY="36.0" prefHeight="335.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                           <children>
+                              <TextArea fx:id="textArea" layoutX="318.0" layoutY="45.0" prefHeight="331.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <Button layoutX="734.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleClearButton" text="Clear" AnchorPane.rightAnchor="10.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

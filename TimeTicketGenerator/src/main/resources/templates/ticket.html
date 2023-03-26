@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Ticket Generator 1.0.0</title>
+</head>
+<body>
+
+
+<form action="/generateTicket" target="_blank" style="margin: 10px 10px 20px 10px;">
+    <fieldset>
+        <legend>Generate ticket:</legend>
+        Expire hour:<br>
+        <input type="number" name="hour" min="0" max="24" autocomplete="off"><br>
+        Expire minute<br>
+        <input type="number" name="minute" min="1" max="59" autocomplete="off"><br><br>
+        <input type="submit" value="Generate">
+    </fieldset>
+</form>
+
+<form action="/isExpire" style="margin: 10px 10px 20px 10px;">
+    <fieldset>
+        <legend>Check Ticket expire date:</legend>
+        Ticket id:<br>
+        <input type="text" name="id" autocomplete="off"><br><br>
+        <input type="submit" value="Check">
+    </fieldset>
+</form>
+
+<form action="/getAllTickets" target="_blank" style="margin: 10px 10px 20px 10px;">
+    <fieldset>
+        <legend>Get all Tickets:</legend>
+        <input type="submit" value="Get">
+    </fieldset>
+</form>
+
+<form action="/deleteAllTickets" target="_blank" style="margin: 10px 10px 20px 10px;">
+    <fieldset>
+        <legend>Delete all tickets in database:</legend>
+        <input type="submit" value="Delete">
+    </fieldset>
+</form>
+
+<form action="/deleteTempBarcodeFile" target="_blank" style="margin: 10px 10px 20px 10px;">
+    <fieldset>
+        <legend>Delete barcode file in resources:</legend>
+        <input type="submit" value="Delete">
+    </fieldset>
+</form>
+
+<form action="/resetTicketId" target="_blank" style="margin: 10px 10px 20px 10px;">
+    <fieldset>
+        <legend>Reset file responsible for generate ticket temporary ID:</legend>
+        <input type="submit" value="Reset">
+    </fieldset>
+</form>
+
+<form action="/resetAllTicketsData" target="_blank" style="margin: 10px 10px 20px 10px;">
+    <fieldset>
+        <legend>Reset all parameters like: Tickets, Barcode file and ID file:</legend>
+        <input type="submit" value="Reset">
+    </fieldset>
+</form>
+
+<form th:action="@{/logout}" method="post" style="margin: 10px 10px 20px 10px; text-align: center;">
+    <input type="submit" value="Sign Out"/>
+</form>
+</body>
+</html>

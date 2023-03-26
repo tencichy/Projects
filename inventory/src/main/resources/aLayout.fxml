@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1304.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AController">
+   <children>
+      <Button layoutX="210.0" layoutY="35.0" mnemonicParsing="false" onAction="#editUser" text="Edit" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="45.0" />
+      <Button layoutX="220.0" layoutY="70.0" mnemonicParsing="false" onAction="#addUser" text="Add" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="80.0" />
+      <Button layoutX="220.0" layoutY="105.0" mnemonicParsing="false" onAction="#removeUser" text="Remove" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="115.0" />
+      <Label layoutX="210.0" layoutY="6.0" text="Search " AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="14.0" />
+      <TableView fx:id="userList" layoutX="14.0" layoutY="14.0" prefHeight="300.0" prefWidth="200.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <columns>
+          <TableColumn fx:id="userColumn" prefWidth="199.0" text="Users" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TableView fx:id="changesTable" layoutX="408.0" layoutY="5.0" prefHeight="200.0" prefWidth="600.0" AnchorPane.leftAnchor="448.0" AnchorPane.topAnchor="10.0">
+        <columns>
+          <TableColumn fx:id="changesNameColumn" prefWidth="129.0" text="Name" />
+            <TableColumn fx:id="changesSurnameColumn" prefWidth="107.0" text="Surname" />
+            <TableColumn fx:id="changesPeselColumn" prefWidth="112.0" text="PESEL" />
+            <TableColumn fx:id="changesRDateColumn" prefWidth="121.0" text="Request date" />
+            <TableColumn fx:id="changesRTimeColumn" prefWidth="130.0" text="Request time" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label layoutX="1048.0" layoutY="6.0" text="Search" AnchorPane.leftAnchor="1058.0" AnchorPane.topAnchor="14.0" />
+      <TextArea fx:id="changesText" editable="false" layoutX="448.0" layoutY="210.0" prefHeight="150.0" prefWidth="600.0" AnchorPane.topAnchor="220.0" />
+      <Button layoutX="1058.0" layoutY="33.0" mnemonicParsing="false" onAction="#removeRequest" text="Remove" AnchorPane.leftAnchor="1058.0" AnchorPane.topAnchor="48.0" />
+      <Button layoutX="1117.0" layoutY="45.0" mnemonicParsing="false" onAction="#clearRequests" text="Clear all" AnchorPane.leftAnchor="1127.0" AnchorPane.topAnchor="48.0" />
+      <TableView fx:id="itemsTable" layoutX="8.0" layoutY="370.0" prefHeight="200.0" prefWidth="800.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="400.0">
+         <columns>
+            <TableColumn fx:id="idColumn" prefWidth="60.0" resizable="false" text="ID" />
+            <TableColumn fx:id="nameColumn" prefWidth="100.0" text="Name" />
+            <TableColumn fx:id="exNameColumn" prefWidth="150.0" text="Extended name" />
+            <TableColumn fx:id="brandColumn" prefWidth="100.0" text="Brand" />
+            <TableColumn fx:id="quantityColumn" resizable="false" text="In stock" />
+            <TableColumn fx:id="priceColumn" resizable="false" text="Price" />
+            <TableColumn fx:id="eanColumn" prefWidth="229.0" resizable="false" sortable="false" text="EAN" />
+         </columns>
+      </TableView>
+      <Label layoutX="816.0" layoutY="400.0" text="Search" AnchorPane.topAnchor="404.0" />
+      <Label layoutX="1059.0" layoutY="176.0" text="From:" AnchorPane.topAnchor="156.0" />
+      <Label layoutX="1058.0" layoutY="193.0" text="To:" />
+      <DatePicker fx:id="incomeFrom" layoutX="1089.0" layoutY="152.0" prefWidth="100.0" AnchorPane.leftAnchor="1094.0" AnchorPane.topAnchor="152.0" />
+      <DatePicker fx:id="incomeTo" layoutX="1094.0" layoutY="189.0" prefWidth="100.0" />
+      <Button layoutX="1194.0" layoutY="156.0" mnemonicParsing="false" onAction="#showIncome" prefHeight="62.0" prefWidth="59.0" text="Show Income" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="1199.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="152.0" />
+      <TextField fx:id="userSearch" layoutX="257.0" layoutY="10.0" AnchorPane.leftAnchor="259.0" AnchorPane.topAnchor="10.0" />
+      <TextField fx:id="itemsSearchField" layoutX="867.0" layoutY="400.0" AnchorPane.leftAnchor="856.0" AnchorPane.topAnchor="400.0" />
+      <TextField fx:id="changesSearchField" layoutX="1103.0" layoutY="10.0" AnchorPane.leftAnchor="1096.0" AnchorPane.topAnchor="10.0" />
+   </children>
+</AnchorPane>

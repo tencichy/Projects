@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import eu.hansolo.medusa.Gauge?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DebugGaugesController">
+   <children>
+      <Gauge fx:id="speed" layoutX="385.0" layoutY="197.0" maxValue="160.0" minorTickMarksVisible="false" needleBehavior="OPTIMIZED" title="SPEED" AnchorPane.leftAnchor="385.0" AnchorPane.topAnchor="197.0" />
+      <Gauge fx:id="rpm" layoutY="197.0" majorTickSpace="2.0" maxValue="28.0" needleBehavior="OPTIMIZED" title="RPM" unit="x100" />
+      <Gauge fx:id="oilTemperature" layoutX="118.0" layoutY="362.0" majorTickSpace="20.0" maxValue="120.0" minorTickMarksVisible="false" needleBehavior="OPTIMIZED" prefHeight="200.0" prefWidth="200.0" skinType="HORIZONTAL" title="OIL TEMP" unit="℃" />
+      <Gauge fx:id="oilPressure" layoutX="318.0" layoutY="362.0" ledVisible="true" majorTickSpace="20.0" minorTickMarksVisible="false" needleBehavior="OPTIMIZED" prefHeight="200.0" prefWidth="200.0" skinType="HORIZONTAL" title="OIL" unit="Pressure" />
+      <Gauge fx:id="fuel" layoutX="385.0" layoutY="-11.0" ledVisible="true" minorTickMarksVisible="false" needleBehavior="OPTIMIZED" skinType="HORIZONTAL" title="FUEL" unit="\%" valueVisible="false" />
+      <Gauge fx:id="waterTemperature" layoutY="-11.0" ledVisible="true" majorTickSpace="20.0" maxValue="120.0" minorTickMarksVisible="false" needleBehavior="OPTIMIZED" skinType="HORIZONTAL" title="WATER TEMP" unit="℃" />
+      <Gauge fx:id="airPressure" layoutX="228.0" layoutY="142.0" ledVisible="true" maxValue="160.0" minorTickMarksVisible="false" needleBehavior="OPTIMIZED" prefHeight="180.0" prefWidth="180.0" title="AIR" unit="Pressure" />
+      <Gauge fx:id="batteryVoltage" layoutX="218.0" layoutY="-25.0" ledVisible="true" majorTickSpace="5.0" maxValue="30.0" mediumTickMarksVisible="false" needleBehavior="OPTIMIZED" prefHeight="200.0" prefWidth="200.0" skinType="HORIZONTAL" title="BATTERY" unit="Voltage" />
+   </children>
+</AnchorPane>

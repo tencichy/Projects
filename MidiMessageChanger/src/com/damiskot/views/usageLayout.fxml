@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.damiskot.UsageController">
+   <children>
+      <ScrollPane hbarPolicy="NEVER" layoutX="169.0" layoutY="146.0" prefHeight="800.0" prefWidth="600.0" vbarPolicy="ALWAYS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2600.0" prefWidth="590.0">
+               <children>
+                  <Label fx:id="howToUse" layoutX="102.0" layoutY="14.0" text="How to use Midi Message Changer" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutY="60.0" prefWidth="595.0" style="-fx-border-color: gray;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="54.0" />
+                  <Label fx:id="settingsTab" layoutX="236.0" layoutY="57.0" text="#1 Settings Tab" AnchorPane.topAnchor="62.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="mmcSettingsTabNC" fitHeight="203.0" fitWidth="421.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="97.0" />
+                  <Label fx:id="chooseInputDevice" layoutX="21.0" layoutY="300.0" text="Choose input device">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Line endX="-171.0" endY="-97.0" fill="BLACK" layoutX="287.0" layoutY="297.0" startX="-210.0" startY="1.0" strokeWidth="2.0" />
+                  <Label fx:id="chooseInputDeviceCaption" layoutX="21.0" layoutY="324.0" prefHeight="38.0" prefWidth="152.0" text="Choose there for example: your MIDI keyboard" wrapText="true" AnchorPane.topAnchor="319.0" />
+                  <Label fx:id="chooseOutputDevice" layoutX="165.0" layoutY="346.0" text="Choose output device">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Line endX="-102.0" endY="33.0" fill="BLACK" layoutX="346.0" layoutY="312.0" startX="-155.0" startY="-62.0" strokeWidth="2.0" />
+                  <Label fx:id="chooseOutputDeviceCaption" layoutX="167.0" layoutY="363.0" prefHeight="76.0" prefWidth="174.0" text="In output device for now you must select virtual midi port that is created by external program like:" wrapText="true" />
+                  <Hyperlink fx:id="loopMIDI" layoutX="189.0" layoutY="416.0" onAction="#handleLoopMIDI" text="loopMIDI" AnchorPane.topAnchor="415.0" />
+                  <Hyperlink fx:id="loopBe" layoutX="260.0" layoutY="415.0" onAction="#handleLoopBe" text="LoopBe" AnchorPane.topAnchor="415.0" />
+                  <Label layoutX="248.0" layoutY="418.0" text="or" />
+                  <Label fx:id="toScanDevices" layoutX="252.0" layoutY="285.0" prefHeight="25.0" prefWidth="178.0" text="Click it to scan devices" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Line endX="-146.0" endY="-196.0" fill="BLACK" layoutX="434.0" layoutY="426.0" startX="-100.0" startY="-141.0" strokeWidth="2.0" />
+                  <Label fx:id="toConnectToDevices" layoutX="359.0" layoutY="313.0" text="Click it to connect to devices">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="toConnectToDevicesCaption" layoutX="360.0" layoutY="332.0" prefHeight="53.0" prefWidth="215.0" text="If you get error when connect, then check if your device are not used by other software like DAW" wrapText="true" />
+                  <Line endX="-9.0" endY="83.0" fill="BLACK" layoutX="474.0" layoutY="230.0" startX="-70.0" strokeWidth="2.0" />
+                  <ImageView fx:id="mmcSettingsTabC" fitHeight="238.0" fitWidth="442.0" layoutX="8.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="445.0" />
+                  <CubicCurve controlX1="-291.0" controlX2="-227.0" controlY1="-213.0" controlY2="-213.0" endX="-218.5" endY="-185.0" fill="#ffffff00" layoutX="282.0" layoutY="897.0" startX="-259.0" startY="-272.0" stroke="BLACK" strokeWidth="2.0" />
+                  <Label fx:id="enableDebug" layoutX="12.0" layoutY="712.0" text="Enable debug">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="enableDebugCaption" layoutX="13.0" layoutY="731.0" prefHeight="69.0" prefWidth="108.0" text="Mark this to see what messages incoming from your device, in debug tab" wrapText="true" AnchorPane.topAnchor="731.0" />
+                  <Label fx:id="panicButton" layoutX="194.0" layoutY="665.0" text="Panic button">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="panicButtonCaption" layoutX="195.0" layoutY="685.0" prefHeight="34.0" prefWidth="108.0" text="Click it to send note off on all keys" wrapText="true" AnchorPane.topAnchor="685.0" />
+                  <Line endX="-117.0" endY="24.0" fill="BLACK" layoutX="353.0" layoutY="641.0" startX="-187.0" startY="-11.0" strokeWidth="2.0" />
+                  <Line endX="-80.0" endY="20.0" fill="BLACK" layoutX="476.0" layoutY="617.0" startX="-48.0" startY="-42.0" strokeWidth="2.0" />
+                  <Label fx:id="toDisconnect" layoutX="284.0" layoutY="637.0" text="Click it to disconnect from devices">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Line endX="-162.0" endY="-114.00006103515625" layoutX="357.0" layoutY="845.0" startX="-256.0" startY="-179.0" strokeWidth="2.0" />
+                  <Label fx:id="toSerialDevice" layoutX="134.0" layoutY="731.0" text="Connect to serial device">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="likeArduino" layoutX="135.0" layoutY="754.0" text="Like: Arduino" AnchorPane.topAnchor="754.0" />
+                  <Separator layoutY="808.0" prefWidth="595.0" style="-fx-border-color: gray;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="808.0" />
+                  <Label fx:id="setMessagesTab" layoutX="233.0" layoutY="816.0" text="#2 Set Messages Tab" AnchorPane.topAnchor="816.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="mmcKeyToClick" fitHeight="36.0" fitWidth="148.0" layoutX="10.0" layoutY="851.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="851.0" />
+                  <Label fx:id="keyToClick" layoutX="24.0" layoutY="906.0" text="Note to click">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="keyToClickCaption" layoutX="24.0" layoutY="927.0" prefHeight="68.0" prefWidth="92.0" text="Choose there key that must be clicked to send message" wrapText="true" AnchorPane.topAnchor="927.0" />
+                  <Line endX="-149.0" endY="-88.0" fill="BLACK" layoutX="236.0" layoutY="965.0" startX="-169.0" startY="-59.0" strokeWidth="2.0" />
+                  <ImageView fx:id="mmcMidiChannel" fitHeight="34.0" fitWidth="158.0" layoutX="356.0" layoutY="848.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="848.0" />
+                  <Label fx:id="midiChannel" layoutX="329.0" layoutY="887.0" text="Midi channel">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="midiChannelCaption" layoutX="329.0" layoutY="907.0" prefHeight="70.0" prefWidth="100.0" text="Choose there channel of your midi message that will be sent" wrapText="true" AnchorPane.leftAnchor="329.0" AnchorPane.topAnchor="907.0" />
+                  <Line endX="-78.0" endY="-137.0" fill="BLACK" layoutX="528.0" layoutY="1010.0" startX="-150.0" startY="-123.0" strokeWidth="2.0" />
+                  <ImageView fx:id="mmcSetMessageKeys" fitHeight="164.0" fitWidth="543.0" layoutX="10.0" layoutY="995.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="995.0" />
+                  <Label fx:id="keysToSend" layoutX="200.0" layoutY="1146.0" text="Notes to send">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="keysToSendCaption" layoutX="201.0" layoutY="1167.0" prefHeight="37.0" prefWidth="111.0" text="Select note(s) that you want to be send" wrapText="true" AnchorPane.topAnchor="1167.0" />
+                  <Line endX="116.5" endY="13.0" fill="BLACK" layoutX="131.0" layoutY="1133.0" startX="26.0" startY="-30.0" strokeWidth="2.0" />
+                  <Line endX="-88.0" endY="-175.4141845703125" fill="BLACK" layoutX="298.0" layoutY="1277.0" startX="-50.0" startY="-131.0" strokeWidth="2.0" />
+                  <Line endX="-30.0" endY="-174.0" fill="BLACK" layoutX="298.0" layoutY="1275.0" startX="-50.0" startY="-130.0" strokeWidth="2.0" />
+                  <Line endX="4.0" endY="-197.0" fill="BLACK" layoutX="319.0" layoutY="1297.0" startX="-71.5" startY="-151.0" strokeWidth="2.0" />
+                  <Ellipse layoutX="247.0" layoutY="1145.0" radiusX="3.0" radiusY="3.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.leftAnchor="244.0" AnchorPane.topAnchor="1142.0" />
+                  <Label fx:id="howManyNotes" layoutX="10.0" layoutY="1131.0" text="How many notes to send" AnchorPane.leftAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="howManyNotesCaption" layoutX="10.0" layoutY="1151.0" prefHeight="35.0" prefWidth="179.0" text="Select how many notes will be sent" wrapText="true" />
+                  <Line endX="-35.5" endY="-136.0" fill="BLACK" layoutX="139.0" layoutY="1267.0" startX="19.0" startY="-201.0" strokeWidth="2.0" />
+                  <Label fx:id="velocityFromInput" layoutX="224.0" layoutY="1225.0" text="Velocity from input">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="velocityFromInputCaption" layoutX="226.0" layoutY="1246.0" prefHeight="104.0" prefWidth="145.0" text="If your device provide velocity (for eq.: if you have dynamic midi keyboard), then you can check this option to send this velocity" wrapText="true" AnchorPane.topAnchor="1246.0" />
+                  <Line endX="-68.0" endY="-289.0" fill="BLACK" layoutX="451.0" layoutY="1417.0" startX="-153.5" startY="-192.0" strokeWidth="2.0" />
+                  <Label fx:id="velocityFromNumber" layoutX="403.0" layoutY="1200.0" text="Velocity form number">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="velocityFromNumberCaption" layoutX="404.0" layoutY="1221.0" prefHeight="54.0" prefWidth="164.0" text="Choose this if your device doesn't provide velocity or if you want it to be static" wrapText="true" AnchorPane.topAnchor="1221.0" />
+                  <Line endX="18.0" endY="14.0" fill="BLACK" layoutX="468.0" layoutY="1186.0" startX="-77.0" startY="-34.0" strokeWidth="2.0" />
+                  <ImageView fx:id="mmcSetMessageCC" fitHeight="118.0" fitWidth="405.0" layoutX="10.0" layoutY="1324.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" />
+                  <Label fx:id="selectCCNumber" layoutX="46.0" layoutY="1430.0" text="Select CC number">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="selectCCNumberCaption" layoutX="46.0" layoutY="1450.0" prefHeight="39.0" prefWidth="151.0" text="This is midi Control Change number." wrapText="true" AnchorPane.topAnchor="1450.0" />
+                  <Hyperlink fx:id="midiCCList" layoutX="89.0" layoutY="1467.0" onAction="#handleMidiCCList" text="Midi CC List" AnchorPane.leftAnchor="89.0" AnchorPane.topAnchor="1467.0" />
+                  <Line endX="-54.0" endY="-111.0" fill="BLACK" layoutX="258.0" layoutY="1518.0" startX="-145.5" startY="-88.0" strokeWidth="2.0" />
+                  <Label fx:id="selectValue" layoutX="430.0" layoutY="1430.0" text="Select value">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="selectValueCaption" layoutX="431.0" layoutY="1452.0" prefHeight="35.0" prefWidth="92.0" text="Select value to send" wrapText="true" AnchorPane.topAnchor="1452.0" />
+                  <Line endX="134.0" endY="-106.0" fill="BLACK" layoutX="341.0" layoutY="1536.0" startX="28.0" startY="-125.0" strokeWidth="2.0" />
+                  <Label fx:id="returnCC" layoutX="276.0" layoutY="1457.0" text="Return CC">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="returnCCCaption" layoutX="214.0" layoutY="1476.0" prefHeight="157.0" prefWidth="199.0" text="Select this if want to return 0 value to your message. For eg.: if this is checked and you select CC number 12 and value 127. When you click note that is associated to this message it's send this message and then when you release this note it sends back message with CC number 12 and value 0" wrapText="true" AnchorPane.topAnchor="1476.0" />
+                  <Line endX="-101.0" endY="-66.0" fill="BLACK" layoutX="415.0" layoutY="1523.0" startX="-132.0" startY="-90.0" strokeWidth="2.0" />
+                  <Label fx:id="addEvent" layoutX="163.0" layoutY="1894.0" text="Add event">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="addEventCaption" layoutX="163.0" layoutY="1913.0" prefHeight="58.0" prefWidth="80.0" text="Add your message to work list" wrapText="true" AnchorPane.leftAnchor="163.0" AnchorPane.topAnchor="1913.0" />
+                  <ImageView fx:id="mmcAddEvent" fitHeight="54.0" fitWidth="117.0" layoutX="77.0" layoutY="1805.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../helpImg/mmcSetMessageAddEvent.png" />
+                     </image>
+                  </ImageView>
+                  <Line endX="-301.0" endY="-336.0" fill="BLACK" layoutX="503.0" layoutY="2230.0" startX="-325.0" startY="-381.0" strokeWidth="2.0" />
+                  <ImageView fx:id="mmcSetMessageSerial" fitHeight="136.0" fitWidth="250.0" layoutX="23.0" layoutY="1642.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="key" layoutX="409.0" layoutY="1689.0" text="Key">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="keyCaption1" layoutX="348.0" layoutY="1714.0" text="Json key, like this: {&quot;" />
+                  <Label fx:id="keyCaptionKey" layoutX="452.0" layoutY="1714.0" text="key">
+                     <font>
+                        <Font name="System Bold" />
+                     </font>
+                  </Label>
+                  <Label fx:id="keyCaption2" layoutX="472.0" layoutY="1714.0" text="&quot;: value}" />
+                  <Label fx:id="keyValue" layoutX="341.0" layoutY="1764.0" text="Key value">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="keyValueCaption1" layoutX="299.0" layoutY="1789.0" text="Json value, like this: {&quot;key&quot;: " />
+                  <Label fx:id="keyValueValue" layoutX="443.0" layoutY="1789.0" text="value">
+                    <font>
+                        <Font name="System Bold" />
+                    </font>
+                  </Label>
+                  <Label layoutX="474.0" layoutY="1789.0" text="}" />
+                  <Label fx:id="keyValueCaption2" layoutX="299.0" layoutY="1805.0" prefHeight="55.0" prefWidth="170.0" text="For now, acceptable values are: text(String), number(int), true or false(boolean)" wrapText="true" AnchorPane.topAnchor="1805.0" />
+                  <Line endX="100.0" endY="26.0" layoutX="303.0" layoutY="1676.0" startX="-157.0" startY="5.0" strokeWidth="2.0" />
+                  <Line endX="83.0" endY="-182.0" layoutX="258.0" layoutY="1946.0" startX="-6.0" startY="-229.0" strokeWidth="2.0" />
+                  <Line endX="29.0" endY="-134.0" layoutX="312.0" layoutY="1898.0" startX="-53.0" startY="-143.0" strokeWidth="2.0" />
+                  <Separator layoutY="1979.0" prefWidth="595.0" style="-fx-border-color: gray;" />
+                  <Label fx:id="eventsListTab" layoutX="233.0" layoutY="1987.0" text="#3 Events List Tab">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="deleteEvent" layoutX="473.0" layoutY="2042.0" text="Delete event">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="deleteEventCaption" layoutX="474.0" layoutY="2062.0" prefHeight="56.0" prefWidth="97.0" text="Delete selected message from work list" wrapText="true" AnchorPane.leftAnchor="474.0" AnchorPane.topAnchor="2062.0" />
+                  <Label fx:id="messageEvent" layoutX="27.0" layoutY="2283.0" text="Message event">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="messageEventCaption" editable="false" layoutX="19.0" layoutY="2307.0" prefHeight="167.0" prefWidth="190.0" text="Ch - channel&#10;Cmd - command&#10;Notes - notes to send&#10;Vel - velocity&#10;CC Num - cc number&#10;CC Val - cc value&#10;Key - serial key&#10;Val on - value to send if pressed&#10;Val off - value to send if released" AnchorPane.topAnchor="2307.0" />
+                  <Label fx:id="open" layoutX="406.0" layoutY="2352.0" text="Open...">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="openCaption" layoutX="407.0" layoutY="2374.0" prefHeight="53.0" prefWidth="60.0" text="Open file with saved preset" wrapText="true" AnchorPane.leftAnchor="407.0" AnchorPane.topAnchor="2374.0" />
+                  <Label fx:id="save" layoutX="408.0" layoutY="2440.0" text="Save...">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="saveCaption" layoutX="406.0" layoutY="2460.0" prefHeight="69.0" prefWidth="47.0" text="Save your preset to file" wrapText="true" AnchorPane.topAnchor="2460.0" />
+                  <ImageView fx:id="mmcFile" fitHeight="119.0" fitWidth="82.0" layoutX="235.0" layoutY="2410.0" pickOnBounds="true" preserveRatio="true" />
+                  <Line endX="107.0" endY="-196.0" fill="BLACK" layoutX="294.0" layoutY="2562.0" startX="-2.0" startY="-86.0" strokeWidth="2.0" />
+                  <Line endX="58.4141845703125" endY="-118.0" fill="BLACK" layoutX="345.0" layoutY="2574.0" startX="-52.0" startY="-66.0" strokeWidth="2.0" />
+                  <ImageView fx:id="mmcEventsListTabList" fitHeight="206.0" fitWidth="351.0" layoutX="20.0" layoutY="2028.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" />
+                  <Line endX="-205.0" endY="-221.0" fill="BLACK" layoutX="326.0" layoutY="2441.0" startX="-236.0" startY="-155.0" strokeWidth="2.0" />
+                  <ImageView fx:id="mmcEventsListTabDelete" fitHeight="77.0" fitWidth="131.0" layoutX="385.0" layoutY="2157.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../helpImg/mmcEventsListButtons.png" />
+                     </image>
+                  </ImageView>
+                  <Line endX="222.0" endY="-421.5" fill="BLACK" layoutX="251.0" layoutY="2476.0" startX="164.0" startY="-306.0" strokeWidth="2.0" />
+                  <Label fx:id="showSerialJson" layoutX="361.0" layoutY="2253.0" text="Show serial json">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="showSerialJsonCaption" layoutX="362.0" layoutY="2276.0" prefHeight="53.0" prefWidth="122.0" text="Click it to show Json that is sent to serial device" wrapText="true" AnchorPane.topAnchor="2276.0" />
+                  <Line endX="-22.5" endY="-138.0" layoutX="444.0" layoutY="2391.0" startX="-30.0" startY="-169.0" strokeWidth="2.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

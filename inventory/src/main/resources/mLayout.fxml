@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MController">
+   <children>
+      <TableView fx:id="itemsTable" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="800.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <columns>
+            <TableColumn fx:id="idColumn" prefWidth="60.0" resizable="false" text="ID" />
+            <TableColumn fx:id="nameColumn" prefWidth="100.0" text="Name" />
+            <TableColumn fx:id="exNameColumn" prefWidth="150.0" text="Extended name" />
+            <TableColumn fx:id="brandColumn" prefWidth="100.0" text="Brand" />
+            <TableColumn fx:id="quantityColumn" resizable="false" text="In stock" />
+            <TableColumn fx:id="priceColumn" resizable="false" text="Price" />
+            <TableColumn fx:id="eanColumn" prefWidth="229.0" sortable="false" text="EAN" />
+         </columns>
+      </TableView>
+      <Label layoutX="820.0" layoutY="45.0" text="Search" AnchorPane.leftAnchor="820.0" AnchorPane.topAnchor="65.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="819.0" layoutY="88.0" mnemonicParsing="false" onAction="#editAction" text="Edit" AnchorPane.topAnchor="98.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="862.0" layoutY="98.0" mnemonicParsing="false" onAction="#addAction" text="Add" AnchorPane.leftAnchor="872.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="helloLabel" layoutX="810.0" layoutY="10.0" text="Hello, " AnchorPane.leftAnchor="820.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="918.0" layoutY="98.0" mnemonicParsing="false" onAction="#removeAction" text="Remove" AnchorPane.leftAnchor="928.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="searchTextField" layoutX="872.0" layoutY="63.0" AnchorPane.leftAnchor="866.0" AnchorPane.topAnchor="63.0" />
+   </children>
+</AnchorPane>

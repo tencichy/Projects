@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.damiskot.GameController">
+   <children>
+      <Rectangle fx:id="head" fill="#a5ff00" height="10.0" stroke="BLACK" strokeType="INSIDE" width="10.0" x="10.0" y="10.0" />
+      <Label fx:id="gamePausedLabel" layoutX="193.0" layoutY="167.0" text="Game Paused" textFill="#b6ffbb">
+         <font>
+            <Font name="LCDMono Normal" size="38.0" />
+         </font>
+      </Label>
+      <Label fx:id="gameOverLabel" layoutX="167.0" layoutY="154.0" text="Game Over" textFill="#b6ffbb">
+         <font>
+            <Font name="LCDMono Normal" size="60.0" />
+         </font>
+      </Label>
+      <Label fx:id="multiplierLabel" layoutX="167.0" layoutY="226.0" text="multiplier" textFill="#b6ffbb">
+         <font>
+            <Font name="LCDMono Normal" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="scoreLabel" layoutX="167.0" layoutY="266.0" text="score" textFill="#b8ffbc">
+         <font>
+            <Font name="LCDMono Normal" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="sumLabel" layoutX="249.0" layoutY="306.0" text="sum" textFill="#b8ffbc">
+         <font>
+            <Font name="LCDMono Normal" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

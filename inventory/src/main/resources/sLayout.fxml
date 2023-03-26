@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="632.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SController">
+   <children>
+      <Label fx:id="helloLabel" layoutX="319.0" layoutY="10.0" text="Hello," AnchorPane.leftAnchor="319.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="319.0" layoutY="65.0" text="Enter EAN: " AnchorPane.leftAnchor="319.0" AnchorPane.topAnchor="65.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="319.0" layoutY="98.0" text="Search:" AnchorPane.topAnchor="98.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="productTable" layoutX="319.0" layoutY="131.0" prefHeight="200.0" prefWidth="302.0" AnchorPane.topAnchor="135.0">
+        <columns>
+          <TableColumn fx:id="productList" prefWidth="301.0" resizable="false" text="Product" />
+        </columns>
+      </TableView>
+      <TableView fx:id="shoppingListTable" layoutX="14.0" layoutY="18.0" prefHeight="200.0" prefWidth="300.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <columns>
+          <TableColumn fx:id="shoppingListColumn" prefWidth="299.0" text="Shopping List" />
+        </columns>
+      </TableView>
+      <Spinner fx:id="eanQuantity" editable="true" layoutX="540.0" layoutY="63.0" prefWidth="80.0" AnchorPane.leftAnchor="540.0" />
+      <Spinner fx:id="searchQuantity" editable="true" layoutX="540.0" layoutY="96.0" prefWidth="80.0" />
+      <Label fx:id="sumLabel" layoutX="310.0" layoutY="760.0" text="Sum: " AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="760.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="414.0" layoutY="331.0" mnemonicParsing="false" onAction="#checkoutAction" text="Checkout" AnchorPane.topAnchor="345.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="eanCodeField" layoutX="382.0" layoutY="63.0" AnchorPane.leftAnchor="389.0" AnchorPane.topAnchor="63.0" />
+      <TextField fx:id="searchField" layoutX="389.0" layoutY="96.0" AnchorPane.leftAnchor="389.0" AnchorPane.topAnchor="96.0" />
+   </children>
+</AnchorPane>
